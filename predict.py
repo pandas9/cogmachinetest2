@@ -10,7 +10,7 @@ THRESHOLD = 0.4
 
 class Predictor(BasePredictor):
     def setup(self):
-        path = '/models'  # Change this to where you downloaded the model
+        path = './models'  # Change this to where you downloaded the model
         self.model = VisionModel.load_model(path)
         self.model.eval()
         self.model = self.model.to('cuda')
