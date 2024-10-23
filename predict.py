@@ -37,6 +37,9 @@ class Predictor(BasePredictor):
 
     @torch.no_grad()
     def predict(self, image: Path = Input(description="Input image")) -> str:
+        print('*******************')
+        print(image)
+        print('*******************')
         input_image = Image.open(image)
         image_tensor = self.prepare_image(input_image, self.model.image_size)
         batch = {'image': image_tensor.unsqueeze(0).to('cuda')}
