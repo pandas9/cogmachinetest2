@@ -5,6 +5,7 @@ from pathlib import Path
 import torch
 import torchvision.transforms.functional as TVF
 from cog import BasePredictor, Input, Path
+import numpy as np
 
 THRESHOLD = 0.4
 

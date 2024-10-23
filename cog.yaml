@@ -11,5 +11,6 @@ build:
     - "einops==0.7.0"
     - "safetensors==0.4.1"
     - "pillow==9.4.0"
+    - "numpy<2"
 
 predict: "predict.py:Predictor"
